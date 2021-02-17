@@ -1,0 +1,38 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+graph [ranksep=equally, splines=polyline] ;
+edge [fontname=helvetica] ;
+0 [label="Contract_Month-to-month <= 0.5\nsamples = 100.0%\nvalue = -0.0", fillcolor="#f5d0b6"] ;
+1 [label="MonthlyCharges <= 0.96\n45.4%\n-0.2", fillcolor="#f7d8c1"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Contract_Two year <= 0.5\n34.2%\n-0.23", fillcolor="#f7d9c3"] ;
+1 -> 2 ;
+3 [label="15.4%\n-1.05", fillcolor="#fdf6f1"] ;
+2 -> 3 ;
+4 [label="18.8%\n-1.31", fillcolor="#ffffff"] ;
+2 -> 4 ;
+5 [label="TotalCharges <= 1.9\n11.2%\n-0.11", fillcolor="#f6d4bc"] ;
+1 -> 5 ;
+6 [label="5.3%\n-0.17", fillcolor="#f7d7bf"] ;
+5 -> 6 ;
+7 [label="5.9%\n-0.9", fillcolor="#fcf1e8"] ;
+5 -> 7 ;
+8 [label="InternetService_Fiber optic <= 0.5\n54.6%\n0.17", fillcolor="#f4caac"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="tenure <= -1.18\n24.7%\n0.02", fillcolor="#f5d0b5"] ;
+8 -> 9 ;
+10 [label="8.2%\n0.93", fillcolor="#efaf82"] ;
+9 -> 10 ;
+11 [label="16.5%\n-0.33", fillcolor="#f8dcc8"] ;
+9 -> 11 ;
+12 [label="tenure <= -0.69\n29.9%\n0.29", fillcolor="#f3c6a5"] ;
+8 -> 12 ;
+13 [label="14.9%\n2.22", fillcolor="#e58139"] ;
+12 -> 13 ;
+14 [label="15.0%\n0.78", fillcolor="#f0b58a"] ;
+12 -> 14 ;
+{rank=same ; 0} ;
+{rank=same ; 1; 8} ;
+{rank=same ; 2; 5; 9; 12} ;
+{rank=same ; 3; 4; 6; 7; 10; 11; 13; 14} ;
+}
